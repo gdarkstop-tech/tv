@@ -1,0 +1,14 @@
+node_modules/
+dist/
+release/
+out/
+*.log
+.vite/
+coverage/
+test-results/
+playwright-report/
+.nova-dev/
+vendor/mpv/*
+!vendor/mpv/README.md
+vendor/ffmpeg/*
+!vendor/ffmpeg/README.md
