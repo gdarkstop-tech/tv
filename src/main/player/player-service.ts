@@ -104,6 +104,10 @@ export class PlayerService extends EventEmitter {
     return this.mpvVersion;
   }
 
+  get pid(): number | null {
+    return this.proc?.pid ?? null;
+  }
+
   async detectEngine(): Promise<boolean> {
     const info = await toolInfo('mpv', this.settings.get().tools.mpvPath);
     this.stateValue.engine.available = info.found;
