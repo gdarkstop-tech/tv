@@ -48,7 +48,10 @@ export interface EdidInfo {
   digitalInput: boolean;
   /** Physical image size reported in the base block, in centimetres. */
   physicalSizeCm: { width: number; height: number } | null;
+  /** Preferred timing (or a larger CTA "native"-flagged format). */
   nativeMode: EdidMode | null;
+  /** Highest-resolution progressive mode the display advertises. */
+  maxMode: EdidMode | null;
   modes: EdidMode[];
   rangeLimits: { minVHz: number; maxVHz: number; minHKHz: number; maxHKHz: number; maxPixelClockMHz: number } | null;
   extensionCount: number;
